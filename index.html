@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday 🎉</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    text-align: center;
+    color: #333;
+}
+
+.section {
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 40px;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #fff; }
+    to { text-shadow: 0 0 20px #ff4081; }
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    background: #ff4081;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e91e63;
+}
+
+img {
+    max-width: 250px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.qr {
+    max-width: 200px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎉 BIRTHDAY WISH SECTION -->
+<div class="section" id="wishSection">
+    <h1>🎂 Happy Birthday 🎉</h1>
+    <h2>Dear <span style="color:#e91e63;">Paramjeet Shalik Rathod</span></h2>
+
+    <img src="paramjeet.jpg" alt="Paramjeet Shalik Rathod">
+
+    <p>May your day be filled with happiness, love, and success 💖</p>
+
+    <button onclick="showGift()">🎁 Send Gift</button>
+</div>
+
+<!-- 🎁 GIFT SECTION -->
+<div class="section hidden" id="giftSection">
+    <h1>🎁 Send Your Love</h1>
+
+    <p>You can send your birthday gift using PhonePe / GPay / Paytm</p>
+
+    <img src="phone-qr.png" class="qr" alt="UPI QR Code">
+
+    <p style="margin-top:20px;">Thank you for your love & blessings ❤️</p>
+
+    <button onclick="goBack()">⬅ Back</button>
+</div>
+
+<script>
+function showGift() {
+    document.getElementById("wishSection").classList.add("hidden");
+    document.getElementById("giftSection").classList.remove("hidden");
+}
+
+function goBack() {
+    document.getElementById("giftSection").classList.add("hidden");
+    document.getElementById("wishSection").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
